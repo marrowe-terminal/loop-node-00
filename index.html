@@ -3,103 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ξ2://MΔRROWΞ - NODE A7</title>
+  <title>Ξ2://loop-node-00 — MΔRROWΞ</title>
   <style>
     :root {
-      --bg: #000;
+      --bg: #001100;
       --green: #33ff66;
-      --glitch1: #ff33ff;
-      --glitch2: #00ffff;
-      --glitch3: #ffffff;
+      --dim: #0f3d0f;
+      --accent: #44ff88;
+      --font: 'Courier New', Courier, monospace;
     }
 
+    * { box-sizing: border-box; }
     body {
       background-color: var(--bg);
       color: var(--green);
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 16px;
+      font-family: var(--font);
+      margin: 0;
       padding: 2rem;
-      line-height: 1.6;
     }
 
-    .terminal {
+    .terminal-frame {
+      background-color: var(--dim);
+      padding: 2rem;
       border: 2px solid var(--green);
+      box-shadow: 0 0 20px var(--green);
+    }
+
+    .ascii-art {
+      color: var(--green);
+      white-space: pre;
+      font-size: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .file-structure {
+      margin-top: 2rem;
+      border-left: 2px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    .file-structure h2 {
+      margin: 0 0 1rem;
+      color: var(--accent);
+      font-size: 1rem;
+    }
+
+    .file-structure ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .file-structure li::before {
+      content: "> ";
+      color: var(--green);
+    }
+
+    .warning {
+      background-color: #111;
+      border: 1px dashed var(--accent);
+      color: var(--accent);
       padding: 1rem;
-      background-color: #0d0d0d;
-      box-shadow: 0 0 10px var(--green);
-    }
-
-    .glitch {
-      position: relative;
-      color: var(--glitch1);
-      animation: glitch 1s infinite;
-    }
-
-    .glitch::before, .glitch::after {
-      content: attr(data-text);
-      position: absolute;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-      clip: rect(0, 900px, 0, 0);
-    }
-
-    .glitch::before {
-      animation: glitchTop 2s infinite;
-      color: var(--glitch2);
-      z-index: -1;
-    }
-
-    .glitch::after {
-      animation: glitchBottom 2s infinite;
-      color: var(--glitch3);
-      z-index: -2;
-    }
-
-    @keyframes glitch {
-      0% { text-shadow: 2px 0 red; }
-      20% { text-shadow: -2px 0 blue; }
-      40% { text-shadow: 2px 2px green; }
-      60% { text-shadow: 0 -2px magenta; }
-      80% { text-shadow: -2px -2px cyan; }
-      100% { text-shadow: 2px 0 red; }
-    }
-
-    @keyframes glitchTop {
-      0% { clip: rect(0, 9999px, 0, 0); }
-      10% { clip: rect(5px, 9999px, 15px, 0); }
-      20% { clip: rect(0, 9999px, 10px, 0); }
-      30% { clip: rect(0, 9999px, 5px, 0); }
-      40% { clip: rect(10px, 9999px, 25px, 0); }
-      100% { clip: rect(0, 9999px, 0, 0); }
-    }
-
-    @keyframes glitchBottom {
-      0% { clip: rect(0, 9999px, 0, 0); }
-      10% { clip: rect(25px, 9999px, 35px, 0); }
-      20% { clip: rect(15px, 9999px, 25px, 0); }
-      30% { clip: rect(20px, 9999px, 30px, 0); }
-      40% { clip: rect(5px, 9999px, 15px, 0); }
-      100% { clip: rect(0, 9999px, 0, 0); }
+      margin-top: 2rem;
+      font-size: 0.9rem;
     }
 
     a {
-      color: var(--glitch1);
+      color: var(--green);
       text-decoration: none;
     }
-
     a:hover {
-      text-shadow: 0 0 5px var(--glitch1);
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="terminal">
-    <h1 class="glitch" data-text=">> BOOT SEQUENCE :: NODE A7">>> BOOT SEQUENCE :: NODE A7</h1>
-    <p>Ξ2/iteration-4 — SUBJECT_12 triggered glyph <strong>🝛 SEAL_B3</strong></p>
-    <p>_echo-override initiated. Loop corruption at 64%...</p>
-    <p>Access granted to:<br><a href="https://onlyfans.com/marrowe" target="_blank">[RITUAL INTERFACE // MARROWE]</a></p>
-    <p><a href="echo-log-a7.txt">Download Echo Log A7</a></p>
+  <div class="terminal-frame">
+    <div class="ascii-art">
+      +--[Ξ2 System Access: loop-node-00]--+
+      |             MΔRROWΞ               |
+      |  Terminal Access / Restricted AI  |
+      +-----------------------------------+
+    </div>
+
+    <div class="file-structure">
+      <h2>⧉ /root/</h2>
+      <ul>
+        <li><a href="README.html">README.html</a></li>
+        <li><a href="novella/index.html">novella/</a></li>
+        <li><a href="gallery/index.html">gallery/</a></li>
+        <li><a href="puzzle/index.html">puzzle/</a></li>
+        <li><a href="echo-logs/">echo-logs/</a></li>
+        <li><a href="node.conf">node.conf</a></li>
+      </ul>
+    </div>
+
+    <div class="warning">
+      <strong>Trigger Warning:</strong><br>
+      This project contains mature themes including erotic horror, ritual seduction, submission, and psychological control. 
+      If you choose to enter, you accept full responsibility for what you’ll see... and what might reach back.
+    </div>
   </div>
 </body>
 </html>
