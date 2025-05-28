@@ -1,18 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ξ2://loop-node-a7</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ξ2://MΔRROWΞ - NODE A7</title>
   <style>
-    body {
-      background-color: #000;
-      color: #33ff66;
-      font-family: monospace;
-      padding: 2rem;
+    :root {
+      --bg: #000;
+      --green: #33ff66;
+      --glitch1: #ff33ff;
+      --glitch2: #00ffff;
+      --glitch3: #ffffff;
     }
+
+    body {
+      background-color: var(--bg);
+      color: var(--green);
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    .terminal {
+      border: 2px solid var(--green);
+      padding: 1rem;
+      background-color: #0d0d0d;
+      box-shadow: 0 0 10px var(--green);
+    }
+
     .glitch {
+      position: relative;
+      color: var(--glitch1);
       animation: glitch 1s infinite;
     }
+
+    .glitch::before, .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+    }
+
+    .glitch::before {
+      animation: glitchTop 2s infinite;
+      color: var(--glitch2);
+      z-index: -1;
+    }
+
+    .glitch::after {
+      animation: glitchBottom 2s infinite;
+      color: var(--glitch3);
+      z-index: -2;
+    }
+
     @keyframes glitch {
       0% { text-shadow: 2px 0 red; }
       20% { text-shadow: -2px 0 blue; }
@@ -21,11 +64,42 @@
       80% { text-shadow: -2px -2px cyan; }
       100% { text-shadow: 2px 0 red; }
     }
+
+    @keyframes glitchTop {
+      0% { clip: rect(0, 9999px, 0, 0); }
+      10% { clip: rect(5px, 9999px, 15px, 0); }
+      20% { clip: rect(0, 9999px, 10px, 0); }
+      30% { clip: rect(0, 9999px, 5px, 0); }
+      40% { clip: rect(10px, 9999px, 25px, 0); }
+      100% { clip: rect(0, 9999px, 0, 0); }
+    }
+
+    @keyframes glitchBottom {
+      0% { clip: rect(0, 9999px, 0, 0); }
+      10% { clip: rect(25px, 9999px, 35px, 0); }
+      20% { clip: rect(15px, 9999px, 25px, 0); }
+      30% { clip: rect(20px, 9999px, 30px, 0); }
+      40% { clip: rect(5px, 9999px, 15px, 0); }
+      100% { clip: rect(0, 9999px, 0, 0); }
+    }
+
+    a {
+      color: var(--glitch1);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-shadow: 0 0 5px var(--glitch1);
+    }
   </style>
 </head>
 <body>
-  <h1 class="glitch">:: ACCESSING NODE A7 ::</h1>
-  <p>Ξ2/iteration-4 // SUBJECT_12 triggered glyph SEAL_B3</p>
-  <p><a href="https://onlyfans.com/marrowe" style="color:#ff33ff;">[Request Ritual Access]</a></p>
+  <div class="terminal">
+    <h1 class="glitch" data-text=">> BOOT SEQUENCE :: NODE A7">>> BOOT SEQUENCE :: NODE A7</h1>
+    <p>Ξ2/iteration-4 — SUBJECT_12 triggered glyph <strong>🝛 SEAL_B3</strong></p>
+    <p>_echo-override initiated. Loop corruption at 64%...</p>
+    <p>Access granted to:<br><a href="https://onlyfans.com/marrowe" target="_blank">[RITUAL INTERFACE // MARROWE]</a></p>
+    <p><a href="echo-log-a7.txt">Download Echo Log A7</a></p>
+  </div>
 </body>
 </html>
