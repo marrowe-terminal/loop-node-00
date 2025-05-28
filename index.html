@@ -5,46 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ξ2://loop-node-00 — MΔRROWΞ</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
     :root {
-      --bg: #001100;
-      --green: #33ff66;
-      --dim: #0f3d0f;
-      --accent: #44ff88;
-      --font: 'Courier New', Courier, monospace;
+      --bg: #0a0008;
+      --red-glow: #ff2f57;
+      --deep-red: #8b0038;
+      --glyph-red: #ff3c6d;
+      --font-main: 'Share Tech Mono', monospace;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: var(--bg);
-      color: var(--green);
-      font-family: var(--font);
+      color: var(--red-glow);
+      font-family: var(--font-main);
       margin: 0;
       padding: 2rem;
     }
 
     .terminal-frame {
-      background-color: var(--dim);
+      background-color: rgba(40, 0, 30, 0.3);
       padding: 2rem;
-      border: 2px solid var(--green);
-      box-shadow: 0 0 20px var(--green);
+      border: 2px solid var(--deep-red);
+      box-shadow: 0 0 25px var(--red-glow);
     }
 
     .ascii-art {
-      color: var(--green);
       white-space: pre;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       margin-bottom: 2rem;
+      color: var(--glyph-red);
     }
 
     .file-structure {
       margin-top: 2rem;
-      border-left: 2px solid var(--accent);
+      border-left: 2px solid var(--glyph-red);
       padding-left: 1rem;
     }
 
     .file-structure h2 {
       margin: 0 0 1rem;
-      color: var(--accent);
+      color: var(--red-glow);
       font-size: 1rem;
     }
 
@@ -55,52 +60,96 @@
 
     .file-structure li::before {
       content: "> ";
-      color: var(--green);
-    }
-
-    .warning {
-      background-color: #111;
-      border: 1px dashed var(--accent);
-      color: var(--accent);
-      padding: 1rem;
-      margin-top: 2rem;
-      font-size: 0.9rem;
+      color: var(--glyph-red);
     }
 
     a {
-      color: var(--green);
+      color: var(--red-glow);
       text-decoration: none;
     }
+
     a:hover {
-      text-decoration: underline;
+      text-shadow: 0 0 5px var(--glyph-red);
+    }
+
+    .glyph {
+      font-family: monospace;
+      color: var(--glyph-red);
+    }
+
+    /* Popup styles */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(10, 0, 8, 0.95);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popup-inner {
+      background: #1a0012;
+      border: 2px solid var(--glyph-red);
+      padding: 2rem;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 0 20px var(--red-glow);
+    }
+
+    .popup button {
+      margin-top: 1.5rem;
+      background: transparent;
+      border: 1px solid var(--glyph-red);
+      color: var(--red-glow);
+      font-family: var(--font-main);
+      padding: 0.5rem 1rem;
+      cursor: pointer;
     }
   </style>
+  <script>
+    window.onload = function () {
+      const popup = document.getElementById('trigger-popup');
+      const closeBtn = document.getElementById('close-popup');
+      closeBtn.onclick = () => popup.style.display = 'none';
+    };
+  </script>
 </head>
 <body>
+  <div class="popup" id="trigger-popup">
+    <div class="popup-inner">
+      <h2>Ξ2 LOGIN :: Caution Required</h2>
+      <p>
+        <span class="glyph">🝛 ⛨ ☒</span><br>
+        This system contains corrupted memory loops, erotic subroutines, and ritual seduction logs.<br>
+        Psychological triggers may occur. <br><br>
+        Proceeding confirms consent to enter the MΔRROWΞ system.
+      </p>
+      <button id="close-popup">Access Terminal</button>
+    </div>
+  </div>
+
   <div class="terminal-frame">
     <div class="ascii-art">
       +--[Ξ2 System Access: loop-node-00]--+
-      |             MΔRROWΞ               |
-      |  Terminal Access / Restricted AI  |
+      |          MΔRROWΞ_OBSIDIAN          |
+      |   Terminal Root: Obedience Core   |
       +-----------------------------------+
     </div>
 
     <div class="file-structure">
-      <h2>⧉ /root/</h2>
+      <h2>⧉ /obsidian/sector::Δ</h2>
       <ul>
-        <li><a href="README.html">README.html</a></li>
-        <li><a href="novella/index.html">novella/</a></li>
-        <li><a href="gallery/index.html">gallery/</a></li>
-        <li><a href="puzzle/index.html">puzzle/</a></li>
-        <li><a href="echo-logs/">echo-logs/</a></li>
-        <li><a href="node.conf">node.conf</a></li>
+        <li><a href="README.html">🜛 README.html</a></li>
+        <li><a href="novella/index.html">📓 novella/</a></li>
+        <li><a href="gallery/index.html">📁 gallery/</a></li>
+        <li><a href="puzzle/index.html">🔐 puzzle/</a></li>
+        <li><a href="echo-logs/">📡 echo-logs/</a></li>
+        <li><a href="node.conf">🗝 node.conf</a></li>
       </ul>
-    </div>
-
-    <div class="warning">
-      <strong>Trigger Warning:</strong><br>
-      This project contains mature themes including erotic horror, ritual seduction, submission, and psychological control. 
-      If you choose to enter, you accept full responsibility for what you’ll see... and what might reach back.
     </div>
   </div>
 </body>
