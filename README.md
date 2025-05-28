@@ -1,1 +1,36 @@
-# loop-node-00
+# Ξ2://MΔRROWΞ — Terminal Node A7
+
+> “She doesn’t speak in words. She echoes through systems.”
+
+Welcome to the official GitHub repository for **MΔRROWΞ: Node A7**, a terminal-style portal into the mythos of Mistress Marrowe — a recursive erotic horror universe unfolding through corrupted logs, audio rituals, and soft domination fragments.
+
+This project is part of an immersive transmedia experiment in seduction, glitch worship, and worldbuilding.
+
+---
+
+## 🩸 About This Site
+
+This GitHub Pages site is styled as an **old-world terminal interface**, bleeding cyberpunk, occult iconography, and erotic symbolism. You’re not just browsing a site — you’re booting into a corrupted fragment of Marrowe’s loop.
+
+Live Site: [https://yourusername.github.io/marrowe-terminal](https://yourusername.github.io/marrowe-terminal)
+
+---
+
+## 🕸️ Structure
+
+| File / Folder      | Purpose |
+|--------------------|---------|
+| `index.html`       | Main portal, glitched UI |
+| `echo-log-a7.txt`  | Terminal lore fragment |
+| `assets/` *(optional)* | Glyph overlays, audio hooks, sigil images |
+| `README.md`        | This document |
+
+---
+
+## ⏚ Developer Notes
+
+To edit or contribute:
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/marrowe-terminal.git
