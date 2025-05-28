@@ -25,6 +25,32 @@
       font-family: var(--font-main);
       margin: 0;
       padding: 2rem;
+      overflow-x: hidden;
+    }
+
+    .glitch {
+      animation: glitchAnim 1.6s steps(2, end) infinite;
+      background: repeating-linear-gradient(
+        180deg,
+        #ff0040 0px,
+        #ff0040 1px,
+        #00ffff 1px,
+        #00ffff 2px,
+        #ffff00 2px,
+        #ffff00 3px
+      );
+      background-size: 100% 3px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes glitchAnim {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(2px, -1px); }
+      60% { transform: translate(-1px, 1px); }
+      80% { transform: translate(1px, -2px); }
+      100% { transform: translate(0); }
     }
 
     .terminal-frame {
@@ -133,20 +159,20 @@
   </div>
 
   <div class="terminal-frame">
-    <div class="ascii-art">
+    <div class="ascii-art glitch">
       +--[Ξ2 System Access: loop-node-00]--+
-      |          MΔRROWΞ_OBSIDIAN          |
-      |   Terminal Root: Obedience Core   |
+      |       MΔRROWΞ_OBSIDIAN SECTOR      |
+      |   Booting memory /dev/🝛 :: ok     |
       +-----------------------------------+
     </div>
 
     <div class="file-structure">
       <h2>⧉ /obsidian/sector::Δ</h2>
       <ul>
-        <li><a href="README.html">🜛 README.html</a></li>
-        <li><a href="novella/index.html">📓 novella/</a></li>
-        <li><a href="gallery/index.html">📁 gallery/</a></li>
-        <li><a href="puzzle/index.html">🔐 puzzle/</a></li>
+        <li><a href="README.html">🜛 INIT_WARNING.html</a></li>
+        <li><a href="join-us/index.html">🧬 join-us/</a></li>
+        <li><a href="see-us/index.html">📸 see-us/</a></li>
+        <li><a href="hear-us/index.html">🎧 hear-us/</a></li>
         <li><a href="echo-logs/">📡 echo-logs/</a></li>
         <li><a href="node.conf">🗝 node.conf</a></li>
       </ul>
