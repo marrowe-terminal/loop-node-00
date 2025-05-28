@@ -27,16 +27,10 @@ Live Site: [https://yourusername.github.io/marrowe-terminal](https://yourusernam
 
 ---
 
-## ⏚ Developer Notes
 
-To edit or contribute:
 
 ## ⚠️ Warning
 
 This project contains erotic horror themes, immersive narrative devices, and stylized depictions of dominance and control. Viewer discretion is advised.
 
 “You weren’t supposed to see this. But now that you have... obey.”
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/marrowe-terminal.git
