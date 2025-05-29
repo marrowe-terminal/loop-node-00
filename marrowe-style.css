@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bg: #05050a;
+  --red-glow: #bdb1fc;
+  --deep-blue: #223047;
+  --glyph-cyan: #00e1ff;
+  --glyph-pink: #ff63c3;
+  --font-main: 'Share Tech Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--red-glow);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+.terminal-frame {
+  background-color: rgba(24, 20, 40, 0.6);
+  padding: 2rem;
+  border: 2px solid var(--deep-blue);
+  box-shadow: 0 0 30px var(--red-glow);
+}
+
+.ascii-art {
+  white-space: pre;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  color: var(--glyph-cyan);
+}
+
+.file-structure {
+  margin-top: 2rem;
+  border-left: 2px solid var(--glyph-pink);
+  padding-left: 1rem;
+}
+
+.file-structure h2 {
+  margin: 0 0 1rem;
+  color: var(--red-glow);
+  font-size: 1rem;
+}
+
+.file-structure ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.file-structure li::before {
+  content: "> ";
+  color: var(--glyph-pink);
+}
+
+a {
+  color: var(--red-glow);
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 8px var(--glyph-cyan);
+}
+
+.glyph {
+  color: var(--glyph-cyan);
+  font-family: var(--font-main);
+  letter-spacing: 0.1em;
+}
+
+.terminal-block {
+  border: 2px solid var(--deep-blue);
+  background: rgba(24, 20, 40, 0.6);
+  box-shadow: 0 0 24px var(--glyph-cyan);
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+h1, h2 {
+  color: var(--glyph-cyan);
+  text-shadow: 0 0 14px var(--glyph-pink);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(8, 6, 15, 0.98);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-inner {
+  background: #1a1733;
+  border: 2px solid var(--glyph-pink);
+  padding: 2rem;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 0 24px var(--glyph-cyan);
+}
+
+.popup-inner.glitch {
+  animation: glitchAnim 1.6s steps(2, end);
+  background: repeating-linear-gradient(
+    180deg,
+    #00e1ff 0px,
+    #00e1ff 1px,
+    #ff63c3 1px,
+    #ff63c3 2px,
+    #bdb1fc 2px,
+    #bdb1fc 3px
+  );
+  background-size: 100% 3px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes glitchAnim {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.popup button {
+  margin-top: 1.5rem;
+  background: transparent;
+  border: 1px solid var(--glyph-cyan);
+  color: var(--red-glow);
+  font-family: var(--font-main);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* Add more universal styles for tables, code blocks, images, etc as you go */
