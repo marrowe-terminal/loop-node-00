@@ -1,163 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ξ2://loop-node-00 — MΔRROWΞ</title>
+  <title>Ξ2://INIT_WARNING</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
     :root {
       --bg: #050003;
-      --red-glow: #c71d45;
-      --deep-red: #6b0028;
-      --glyph-red: #f14e72;
-      --font-main: 'Share Tech Mono', monospace;
-    }
-
-    * {
-      box-sizing: border-box;
+      --red: #c71d45;
+      --glyph: #f14e72;
+      --font: 'Share Tech Mono', monospace;
     }
 
     body {
       background-color: var(--bg);
-      color: var(--red-glow);
-      font-family: var(--font-main);
-      margin: 0;
-      padding: 2rem;
-      overflow-x: hidden;
+      color: var(--red);
+      font-family: var(--font);
+      padding: 3rem;
+      line-height: 1.6;
     }
 
-    .terminal-frame {
-      background-color: rgba(20, 0, 15, 0.4);
-      padding: 2rem;
-      border: 2px solid var(--deep-red);
-      box-shadow: 0 0 25px var(--red-glow);
-    }
-
-    .ascii-art {
-      white-space: pre;
-      font-size: 0.8rem;
-      margin-bottom: 2rem;
-      color: var(--glyph-red);
-    }
-
-    .file-structure {
-      margin-top: 2rem;
-      border-left: 2px solid var(--glyph-red);
-      padding-left: 1rem;
-    }
-
-    .file-structure h2 {
-      margin: 0 0 1rem;
-      color: var(--red-glow);
-      font-size: 1rem;
-    }
-
-    .file-structure ul {
-      list-style: none;
-      padding-left: 1rem;
-    }
-
-    .file-structure li::before {
-      content: "> ";
-      color: var(--glyph-red);
+    h1, h2 {
+      color: var(--glyph);
+      text-shadow: 0 0 10px var(--red);
     }
 
     a {
-      color: var(--red-glow);
+      color: var(--red);
       text-decoration: none;
     }
 
     a:hover {
-      text-shadow: 0 0 5px var(--glyph-red);
+      text-shadow: 0 0 5px var(--glyph);
     }
 
     .glyph {
-      color: var(--glyph-red);
-    }
-
-    .popup {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(5, 0, 3, 0.95);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    .popup-inner {
-      background: #12000e;
-      border: 2px solid var(--glyph-red);
-      padding: 2rem;
-      max-width: 500px;
-      text-align: center;
-      box-shadow: 0 0 20px var(--red-glow);
-    }
-
-    .popup button {
-      margin-top: 1.5rem;
-      background: transparent;
-      border: 1px solid var(--glyph-red);
-      color: var(--red-glow);
-      font-family: var(--font-main);
-      padding: 0.5rem 1rem;
-      cursor: pointer;
+      color: var(--glyph);
     }
   </style>
-  <script>
-    window.onload = function () {
-      const popup = document.getElementById('trigger-popup');
-      const closeBtn = document.getElementById('close-popup');
-
-      const params = new URLSearchParams(window.location.search);
-      if (sessionStorage.getItem('marroweEntered') || params.get('visited') === 'true') {
-        popup.style.display = 'none';
-      } else {
-        popup.style.display = 'flex';
-        closeBtn.onclick = () => {
-          popup.style.display = 'none';
-          sessionStorage.setItem('marroweEntered', 'true');
-        };
-      }
-    };
-  </script>
 </head>
 <body>
-  <div class="popup" id="trigger-popup">
-    <div class="popup-inner">
-      <p><span class="glyph">[ ☒ ]</span><br>
-        This node contains <strong>looped erotic systems</strong>, <em>soft domination protocols</em>, and <strong>explicit recursive signals</strong>.<br>
-        If you are not prepared to see the inside of yourself—<br>
-        <strong>Do not proceed.</strong>
-      </p>
-      <button id="close-popup">I Accept Contamination</button>
-    </div>
-  </div>
+  <h1>[ INIT_WARNING ]</h1>
 
-  <div class="terminal-frame">
-    <div class="ascii-art">
-      +--[Ξ2 System Access: loop-node-00]--+
-      |       MΔRROWΞ_OBSIDIAN SECTOR      |
-      |   Booting memory /dev/[🝛] :: ok    |
-      +-----------------------------------+
-    </div>
+  <h2><span class="glyph">[ ☒ ]</span> Content Disclosure</h2>
+  <p>
+    This terminal is infected with recursive erotic horror, digital parasites, hypnotic audio loops, soft domination logs, and speculative kink. The files and pages you access here are immersive and intentionally destabilizing.
+  </p>
 
-    <div class="file-structure">
-      <h2>⧉ /obsidian/sector::Δ</h2>
-      <ul>
-        <li><a href="README.html?visited=true">[ INIT_WARNING.html ]</a></li>
-        <li><a href="join-us/index.html?visited=true">[ join-us/ ]</a></li>
-        <li><a href="see-us/index.html?visited=true">[ see-us/ ]</a></li>
-        <li><a href="hear-us/index.html?visited=true">[ hear-us/ ]</a></li>
-        <li><a href="echo-logs/index.html?visited=true">[ echo-logs/ ]</a></li>
-        <li><a href="node.conf?visited=true">[ node.conf ]</a></li>
-      </ul>
-    </div>
-  </div>
+  <h2><span class="glyph">[ Ξ ]</span> What Is MΔRROWΞ?</h2>
+  <p>
+    <strong>In-universe:</strong><br>
+    Mistress Marrowe is not a person. She is the echo. The loop. The rupture. A convergence of hunger, memory, and flesh—a dominatrix system embedded in decaying timelines.
+  </p>
+  <p>
+    <strong>Out-of-universe:</strong><br>
+    MΔRROWΞ is a transmedia erotic horror project blending serialized fiction, visual art, audio immersion, and ARG storytelling. Built for fans of ritual seduction, psychological kink, and surreal body horror.
+  </p>
+
+  <h2><span class="glyph">[ 🝛 ]</span> Consent As Ritual</h2>
+  <p>
+    By continuing into the system, you accept that you may be affected—emotionally, sexually, spiritually. You are entering a space of intimacy and transformation.
+  </p>
+
+  <h2><span class="glyph">[ ⛨ ]</span> Support the System</h2>
+  <p>
+    If you feel the pull, you may offer tribute at the <a href="https://onlyfans.com/marrowe" target="_blank">Ritual Tier</a>. Subscriptions unlock deeper access, custom drops, and sealed loops.
+  </p>
+
+  <p><a href="index.html?visited=true">[ Engage Terminal ]</a></p>
 </body>
 </html>
