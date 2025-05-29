@@ -8,10 +8,10 @@
     @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
     :root {
-      --bg: #0a0008;
-      --red-glow: #ff2f57;
-      --deep-red: #8b0038;
-      --glyph-red: #ff3c6d;
+      --bg: #050003;
+      --red-glow: #c71d45;
+      --deep-red: #6b0028;
+      --glyph-red: #f14e72;
       --font-main: 'Share Tech Mono', monospace;
     }
 
@@ -29,7 +29,7 @@
     }
 
     .terminal-frame {
-      background-color: rgba(40, 0, 30, 0.3);
+      background-color: rgba(20, 0, 15, 0.4);
       padding: 2rem;
       border: 2px solid var(--deep-red);
       box-shadow: 0 0 25px var(--red-glow);
@@ -74,18 +74,16 @@
     }
 
     .glyph {
-      font-family: monospace;
       color: var(--glyph-red);
     }
 
-    /* Popup styles */
     .popup {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(10, 0, 8, 0.95);
+      background: rgba(5, 0, 3, 0.95);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -93,37 +91,12 @@
     }
 
     .popup-inner {
-      background: #1a0012;
+      background: #12000e;
       border: 2px solid var(--glyph-red);
       padding: 2rem;
       max-width: 500px;
       text-align: center;
       box-shadow: 0 0 20px var(--red-glow);
-    }
-
-    .popup-inner.glitch {
-      animation: glitchAnim 1.6s steps(2, end);
-      background: repeating-linear-gradient(
-        180deg,
-        #ff0040 0px,
-        #ff0040 1px,
-        #00ffff 1px,
-        #00ffff 2px,
-        #ffff00 2px,
-        #ffff00 3px
-      );
-      background-size: 100% 3px;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    @keyframes glitchAnim {
-      0% { transform: translate(0); }
-      20% { transform: translate(-2px, 2px); }
-      40% { transform: translate(2px, -1px); }
-      60% { transform: translate(-1px, 1px); }
-      80% { transform: translate(1px, -2px); }
-      100% { transform: translate(0); }
     }
 
     .popup button {
@@ -140,28 +113,29 @@
     window.onload = function () {
       const popup = document.getElementById('trigger-popup');
       const closeBtn = document.getElementById('close-popup');
-      const popupInner = document.querySelector('.popup-inner');
 
-      // Remove glitch effect after 2 seconds
-      setTimeout(() => {
-        popupInner.classList.remove('glitch');
-      }, 2000);
-
-      closeBtn.onclick = () => popup.style.display = 'none';
+      const params = new URLSearchParams(window.location.search);
+      if (sessionStorage.getItem('marroweEntered') || params.get('visited') === 'true') {
+        popup.style.display = 'none';
+      } else {
+        popup.style.display = 'flex';
+        closeBtn.onclick = () => {
+          popup.style.display = 'none';
+          sessionStorage.setItem('marroweEntered', 'true');
+        };
+      }
     };
   </script>
 </head>
 <body>
   <div class="popup" id="trigger-popup">
-    <div class="popup-inner glitch">
-      <h2>Ξ2 LOGIN :: Caution Required</h2>
-      <p>
-        <span class="glyph">🝛 ⛨ ☒</span><br>
-        This system contains corrupted memory loops, erotic subroutines, and ritual seduction logs.<br>
-        Psychological triggers may occur. <br><br>
-        Proceeding confirms consent to enter the MΔRROWΞ system.
+    <div class="popup-inner">
+      <p><span class="glyph">[ ☒ ]</span><br>
+        This node contains <strong>looped erotic systems</strong>, <em>soft domination protocols</em>, and <strong>explicit recursive signals</strong>.<br>
+        If you are not prepared to see the inside of yourself—<br>
+        <strong>Do not proceed.</strong>
       </p>
-      <button id="close-popup">Access Terminal</button>
+      <button id="close-popup">I Accept Contamination</button>
     </div>
   </div>
 
@@ -169,19 +143,19 @@
     <div class="ascii-art">
       +--[Ξ2 System Access: loop-node-00]--+
       |       MΔRROWΞ_OBSIDIAN SECTOR      |
-      |   Booting memory /dev/🝛 :: ok     |
+      |   Booting memory /dev/[🝛] :: ok    |
       +-----------------------------------+
     </div>
 
     <div class="file-structure">
       <h2>⧉ /obsidian/sector::Δ</h2>
       <ul>
-        <li><a href="README.html">🜛 INIT_WARNING.html</a></li>
-        <li><a href="join-us/index.html">🧬 join-us/</a></li>
-        <li><a href="see-us/index.html">📸 see-us/</a></li>
-        <li><a href="hear-us/index.html">🎧 hear-us/</a></li>
-        <li><a href="echo-logs/">📡 echo-logs/</a></li>
-        <li><a href="node.conf">🗝 node.conf</a></li>
+        <li><a href="README.html?visited=true">[ INIT_WARNING.html ]</a></li>
+        <li><a href="join-us/index.html?visited=true">[ join-us/ ]</a></li>
+        <li><a href="see-us/index.html?visited=true">[ see-us/ ]</a></li>
+        <li><a href="hear-us/index.html?visited=true">[ hear-us/ ]</a></li>
+        <li><a href="echo-logs/index.html?visited=true">[ echo-logs/ ]</a></li>
+        <li><a href="node.conf?visited=true">[ node.conf ]</a></li>
       </ul>
     </div>
   </div>
