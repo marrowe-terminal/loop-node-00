@@ -1,24 +1,24 @@
 # 🜛 loop-node-00
 
-> **Ξ2://loop-node-00**  
-> *A recursive erotic horror terminal by* **marrowe-terminal**
+> **MΔRROWΞ**  
+> *A recursive erotic horror project by* **marrowe-terminal**
 
 ---
 
-## 🧬 What Is MΔRROWΞ?
+##  What Is MΔRROWΞ?
 
 **MΔRROWΞ** is a transmedia erotic horror universe that blends dark fantasy, sci-fi, and the occult. It centers around the mysterious, seductive entity known as Mistress Marrowe, who appears across timelines, platforms, and bodies—always tethered to desire, transformation, and secrets hidden in flesh and fabric.
 
 This project includes:
 
-- Serialized visual novels, manga, and audio erotica
+- Serialized visual novels, a weekly novella, and audio erotica
 - A “living” character persona for social media and fan interaction
 - NSFW and immersive ARG-style content (puzzle trails, coded glyphs, fake websites, etc.)
 - Lore-rich storytelling featuring monster-girls, corrupted tech, parasitic love, VR seduction, and biological rituals
 
 ---
 
-## 🗂️ Repository Structure
+##  Repository Structure
 
 ```bash
 loop-node-00/
@@ -34,7 +34,7 @@ loop-node-00/
 
 ---
 
-## ⚠️ Content Warning
+##  Content Warning
 
 This project contains:
 
@@ -47,27 +47,7 @@ By engaging with this material, you consent to experiencing intense and potentia
 
 ---
 
-## 🛠️ Installation & Usage
-
-To view the project locally:
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/marrowe-terminal/loop-node-00.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd loop-node-00
-   ```
-
-3. Open `index.html` in your preferred web browser.
-
----
-
-## 💸 Support the Creator
+##  Support the Creator
 
 If you wish to support the continuation of this project and gain access to exclusive content:
 
@@ -77,12 +57,11 @@ Your support is deeply appreciated and fuels the expansion of the MΔRROWΞ univ
 
 ---
 
-## 📬 Contact
+##  Contact
 
 For inquiries, collaborations, or feedback:
 
 - GitHub: [@marrowe-terminal](https://github.com/marrowe-terminal)
-- Email: [contact@marrowe-terminal.com](mailto:contact@marrowe-terminal.com)
 
 ---
 
