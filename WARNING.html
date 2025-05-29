@@ -7,67 +7,81 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
     :root {
-      --bg: #050003;
-      --red: #c71d45;
-      --glyph: #f14e72;
-      --font: 'Share Tech Mono', monospace;
+      --bg: #05050a;
+      --red-glow: #bdb1fc;
+      --deep-blue: #223047;
+      --glyph-cyan: #00e1ff;
+      --glyph-pink: #ff63c3;
+      --font-main: 'Share Tech Mono', monospace;
     }
 
     body {
       background-color: var(--bg);
-      color: var(--red);
-      font-family: var(--font);
+      color: var(--red-glow);
+      font-family: var(--font-main);
       padding: 3rem;
       line-height: 1.6;
     }
 
     h1, h2 {
-      color: var(--glyph);
-      text-shadow: 0 0 10px var(--red);
+      color: var(--glyph-cyan);
+      text-shadow: 0 0 14px var(--glyph-pink);
     }
 
     a {
-      color: var(--red);
+      color: var(--glyph-pink);
       text-decoration: none;
     }
 
     a:hover {
-      text-shadow: 0 0 5px var(--glyph);
+      text-shadow: 0 0 5px var(--glyph-cyan);
     }
 
     .glyph {
-      color: var(--glyph);
+      color: var(--glyph-pink);
+      font-family: var(--font-main);
+      letter-spacing: 0.1em;
+    }
+    .terminal-block {
+      border: 2px solid var(--deep-blue);
+      background: rgba(24, 20, 40, 0.6);
+      box-shadow: 0 0 24px var(--glyph-cyan);
+      padding: 2rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
   </style>
 </head>
 <body>
-  <h1>[ INIT_WARNING ]</h1>
+  <div class="terminal-block">
+    <h1>[ INIT_WARNING ]</h1>
 
-  <h2><span class="glyph">[ ☒ ]</span> Content Disclosure</h2>
-  <p>
-    This terminal is infected with recursive erotic horror, digital parasites, hypnotic audio loops, soft domination logs, and speculative kink. The files and pages you access here are immersive and intentionally destabilizing.
-  </p>
+    <h2><span class="glyph">[ ☒ ]</span> Content Disclosure</h2>
+    <p>
+      This terminal is infected with recursive erotic horror, digital parasites, hypnotic audio loops, soft domination logs, and speculative kink. The files and pages you access here are immersive and intentionally destabilizing.
+    </p>
 
-  <h2><span class="glyph">[ Ξ ]</span> What Is MΔRROWΞ?</h2>
-  <p>
-    <strong>In-universe:</strong><br>
-    Mistress Marrowe is not a person. She is the echo. The loop. The rupture. A convergence of hunger, memory, and flesh—a dominatrix system embedded in decaying timelines.
-  </p>
-  <p>
-    <strong>Out-of-universe:</strong><br>
-    MΔRROWΞ is a transmedia erotic horror project blending serialized fiction, visual art, audio immersion, and ARG storytelling. Built for fans of ritual seduction, psychological kink, and surreal body horror.
-  </p>
+    <h2><span class="glyph">[ Ξ ]</span> What Is MΔRROWΞ?</h2>
+    <p>
+      <strong>In-universe:</strong><br>
+      Mistress Marrowe is not a person. She is the echo. The loop. The rupture. A convergence of hunger, memory, and flesh—a dominatrix system embedded in decaying timelines.
+    </p>
+    <p>
+      <strong>Out-of-universe:</strong><br>
+      MΔRROWΞ is a transmedia erotic horror project blending serialized fiction, visual art, audio immersion, and ARG storytelling. Built for fans of ritual seduction, psychological kink, and surreal body horror.
+    </p>
 
-  <h2><span class="glyph">[ 🝛 ]</span> Consent As Ritual</h2>
-  <p>
-    By continuing into the system, you accept that you may be affected—emotionally, sexually, spiritually. You are entering a space of intimacy and transformation.
-  </p>
+    <h2><span class="glyph">[ 🝛 ]</span> Consent As Ritual</h2>
+    <p>
+      By continuing into the system, you accept that you may be affected—emotionally, sexually, spiritually. You are entering a space of intimacy and transformation.
+    </p>
 
-  <h2><span class="glyph">[ ⛨ ]</span> Support the System</h2>
-  <p>
-    If you feel the pull, you may offer tribute at the <a href="https://onlyfans.com/marrowe" target="_blank">Ritual Tier</a>. Subscriptions unlock deeper access, custom drops, and sealed loops.
-  </p>
+    <h2><span class="glyph">[ ⛨ ]</span> Support the System</h2>
+    <p>
+      If you feel the pull, you may offer tribute at the <a href="https://onlyfans.com/marrowe" target="_blank">Ritual Tier</a>. Subscriptions unlock deeper access, custom drops, and sealed loops.
+    </p>
 
-  <p><a href="index.html?visited=true">[ Engage Terminal ]</a></p>
+    <p><a href="index.html?visited=true">[ Engage Terminal ]</a></p>
+  </div>
 </body>
 </html>
