@@ -8,10 +8,11 @@
     @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
     :root {
-      --bg: #020412;
-      --red-glow: #6a040f;
-      --deep-red: #1d0515;
-      --glyph-red: #510513;
+      --bg: #05050a;
+      --red-glow: #bdb1fc;
+      --deep-blue: #223047;
+      --glyph-cyan: #00e1ff;
+      --glyph-pink: #ff63c3;
       --font-main: 'Share Tech Mono', monospace;
     }
 
@@ -29,22 +30,22 @@
     }
 
     .terminal-frame {
-      background-color: rgba(20, 0, 15, 0.4);
+      background-color: rgba(24, 20, 40, 0.6);
       padding: 2rem;
-      border: 2px solid var(--deep-red);
-      box-shadow: 0 0 25px var(--red-glow);
+      border: 2px solid var(--deep-blue);
+      box-shadow: 0 0 30px var(--red-glow);
     }
 
     .ascii-art {
       white-space: pre;
       font-size: 0.8rem;
       margin-bottom: 2rem;
-      color: var(--glyph-red);
+      color: var(--glyph-cyan);
     }
 
     .file-structure {
       margin-top: 2rem;
-      border-left: 2px solid var(--glyph-red);
+      border-left: 2px solid var(--glyph-pink);
       padding-left: 1rem;
     }
 
@@ -61,7 +62,7 @@
 
     .file-structure li::before {
       content: "> ";
-      color: var(--glyph-red);
+      color: var(--glyph-pink);
     }
 
     a {
@@ -70,20 +71,23 @@
     }
 
     a:hover {
-      text-shadow: 0 0 5px var(--glyph-red);
+      text-shadow: 0 0 8px var(--glyph-cyan);
     }
 
     .glyph {
-      color: var(--glyph-red);
+      color: var(--glyph-cyan);
+      font-family: var(--font-main);
+      letter-spacing: 0.1em;
     }
 
+    /* Popup styles */
     .popup {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(5, 0, 3, 0.95);
+      background: rgba(8, 6, 15, 0.98);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -91,18 +95,43 @@
     }
 
     .popup-inner {
-      background: #12000e;
-      border: 2px solid var(--glyph-red);
+      background: #1a1733;
+      border: 2px solid var(--glyph-pink);
       padding: 2rem;
       max-width: 500px;
       text-align: center;
-      box-shadow: 0 0 20px var(--red-glow);
+      box-shadow: 0 0 24px var(--glyph-cyan);
+    }
+
+    .popup-inner.glitch {
+      animation: glitchAnim 1.6s steps(2, end);
+      background: repeating-linear-gradient(
+        180deg,
+        #00e1ff 0px,
+        #00e1ff 1px,
+        #ff63c3 1px,
+        #ff63c3 2px,
+        #bdb1fc 2px,
+        #bdb1fc 3px
+      );
+      background-size: 100% 3px;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes glitchAnim {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(2px, -1px); }
+      60% { transform: translate(-1px, 1px); }
+      80% { transform: translate(1px, -2px); }
+      100% { transform: translate(0); }
     }
 
     .popup button {
       margin-top: 1.5rem;
       background: transparent;
-      border: 1px solid var(--glyph-red);
+      border: 1px solid var(--glyph-cyan);
       color: var(--red-glow);
       font-family: var(--font-main);
       padding: 0.5rem 1rem;
@@ -113,48 +142,47 @@
     window.onload = function () {
       const popup = document.getElementById('trigger-popup');
       const closeBtn = document.getElementById('close-popup');
+      const popupInner = document.querySelector('.popup-inner');
 
-      const params = new URLSearchParams(window.location.search);
-      if (sessionStorage.getItem('marroweEntered') || params.get('visited') === 'true') {
-        popup.style.display = 'none';
-      } else {
-        popup.style.display = 'flex';
-        closeBtn.onclick = () => {
-          popup.style.display = 'none';
-          sessionStorage.setItem('marroweEntered', 'true');
-        };
-      }
+      // Remove glitch effect after 2 seconds
+      setTimeout(() => {
+        popupInner.classList.remove('glitch');
+      }, 2000);
+
+      closeBtn.onclick = () => popup.style.display = 'none';
     };
   </script>
 </head>
 <body>
   <div class="popup" id="trigger-popup">
-    <div class="popup-inner">
-      <p><span class="glyph">[ ☒ ]</span><br>
-        This node contains <strong>looped erotic systems</strong>, <em>soft domination protocols</em>, and <strong>explicit recursive signals</strong>.<br>
-        If you are not prepared to see the inside of yourself—<br>
-        <strong>Do not proceed.</strong>
+    <div class="popup-inner glitch">
+      <h2>Ξ2 LOGIN :: Caution Required</h2>
+      <p>
+        <span class="glyph">🝛 ⛨ ☒</span><br>
+        This system contains corrupted memory loops, erotic subroutines, and ritual seduction logs.<br>
+        Psychological triggers may occur. <br><br>
+        Proceeding confirms consent to enter the MΔRROWΞ system.
       </p>
-      <button id="close-popup">I Accept Contamination</button>
+      <button id="close-popup">Access Terminal</button>
     </div>
   </div>
 
   <div class="terminal-frame">
     <div class="ascii-art">
       +--[Ξ2 System Access: loop-node-00]--+
-      |       PROJECT MΔRROWΞ      |
-      |   Booting memory /dev/[🝛] :: ok    |
+      |       MΔRROWΞ_OBSIDIAN SECTOR      |
+      |   Booting memory /dev/🝛 :: ok     |
       +-----------------------------------+
     </div>
 
     <div class="file-structure">
       <h2>⧉ /obsidian/sector::Δ</h2>
       <ul>
-        <li><a href="WARNING.html?visited=true">[ INIT_WARNING ]</a></li>
-        <li><a href="see-us/index.html?visited=true"  >[ WATCH ]</a></li>
-        <li><a href="hear-us/index.html?visited=true"  >[ LISTEN ]</a></li>
-        <li><a href="join-us/index.html?visited=true"  >[ OBEY ]</a></li>
-        <li><a href="echo-logs/index.html?visited=true"  >[ echo-logs/ ]</a></li>
+        <li><a href="WARNING.html">🜛 INIT_WARNING</a></li>
+        <li><a href="see-us/index.html"> WATCH</a></li>
+        <li><a href="hear-us/index.html"> LISTEN</a></li>
+        <li><a href="join-us/index.html"> OBEY</a></li>
+        <li><a href="echo-logs/"> echo-logs/</a></li>
       </ul>
     </div>
   </div>
