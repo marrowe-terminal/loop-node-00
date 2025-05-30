@@ -12,10 +12,6 @@ window.onload = function () {
   const popupInner = document.querySelector('.popup-inner');
   const params = new URLSearchParams(window.location.search);
 
-  // If visited=true is present in the URL, or session indicates entry, skip popup
-  if (sessionStorage.getItem('marroweEntered') === 'true' || params.get('visited') === 'true') {
-    if (popup) popup.style.display = 'none';
-  } else {
     if (popup) popup.style.display = 'flex';
     if (popupInner) {
       popupInner.classList.add('glitch');
@@ -24,7 +20,6 @@ window.onload = function () {
     if (closeBtn) {
       closeBtn.onclick = () => {
         popup.style.display = 'none';
-        sessionStorage.setItem('marroweEntered', 'true');
       };
     }
   }
