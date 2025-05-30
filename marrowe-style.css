@@ -31,7 +31,7 @@ body {
 
 .ascii-art {
   white-space: pre;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-bottom: 2rem;
   color: var(--glyph-cyan);
 }
