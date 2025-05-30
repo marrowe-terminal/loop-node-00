@@ -109,6 +109,23 @@ h1, h2 {
   box-shadow: 0 0 24px var(--glyph-cyan);
 }
 
+.glitch {
+  display: inline-block;
+  animation: glitchAnim 1.2s infinite steps(2, end);
+  background: repeating-linear-gradient(
+    180deg,
+    #00e1ff 0px,
+    #00e1ff 1px,
+    #ff63c3 1px,
+    #ff63c3 2px,
+    #bdb1fc 2px,
+    #bdb1fc 3px
+  );
+  background-size: 100% 3px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .popup-inner.glitch {
   animation: glitchAnim 1.6s steps(2, end);
   background: repeating-linear-gradient(
