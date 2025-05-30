@@ -6,19 +6,30 @@
   <title>Ξ2://loop-node-00 — MΔRROWΞ</title>
   <link rel="stylesheet" href="marrowe-style.css">
   <script>
-    window.onload = function () {
-      const popup = document.getElementById('trigger-popup');
-      const closeBtn = document.getElementById('close-popup');
-      const popupInner = document.querySelector('.popup-inner');
+window.onload = function () {
+  const popup = document.getElementById('trigger-popup');
+  const closeBtn = document.getElementById('close-popup');
+  const popupInner = document.querySelector('.popup-inner');
+  const params = new URLSearchParams(window.location.search);
 
-      // Remove glitch effect after 2 seconds
-      setTimeout(() => {
-        popupInner.classList.remove('glitch');
-      }, 1000);
-
-      closeBtn.onclick = () => popup.style.display = 'none';
-    };
-  </script>
+  // If visited=true is present in the URL, or session indicates entry, skip popup
+  if (sessionStorage.getItem('marroweEntered') === 'true' || params.get('visited') === 'true') {
+    if (popup) popup.style.display = 'none';
+  } else {
+    if (popup) popup.style.display = 'flex';
+    if (popupInner) {
+      popupInner.classList.add('glitch');
+      setTimeout(() => popupInner.classList.remove('glitch'), 500);
+    }
+    if (closeBtn) {
+      closeBtn.onclick = () => {
+        popup.style.display = 'none';
+        sessionStorage.setItem('marroweEntered', 'true');
+      };
+    }
+  }
+};
+</script>
 </head>
 <body>
   <div class="popup" id="trigger-popup">
