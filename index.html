@@ -12,28 +12,36 @@ window.onload = function () {
   const popupInner = document.querySelector('.popup-inner');
   const params = new URLSearchParams(window.location.search);
 
-  // If visited=true is present in the URL, or session indicates entry, skip popup
-  if (sessionStorage.getItem('marroweEntered') === 'true' || params.get('visited') === 'true') {
-    if (popup) popup.style.display = 'none';
+  // Only show popup if not already shown this session
+  if (!sessionStorage.getItem('marroweEntered')) {
+    // Check if the referrer is NOT from your own site
+    const isInternalReferrer = document.referrer.startsWith(window.location.origin);
+
+    if (!isInternalReferrer) {
+      if (popup) popup.style.display = 'flex';
+      if (popupInner) {
+        popupInner.classList.add('glitch');
+        setTimeout(() => popupInner.classList.remove('glitch'), 500);
+      }
+      if (closeBtn) {
+        closeBtn.onclick = () => {
+          popup.style.display = 'none';
+          sessionStorage.setItem('marroweEntered', 'true');
+        };
+      }
+    } else {
+      // If returning from internal page, don't show the popup
+      if (popup) popup.style.display = 'none';
+    }
   } else {
-    if (popup) popup.style.display = 'flex';
-    if (popupInner) {
-      popupInner.classList.add('glitch');
-      setTimeout(() => popupInner.classList.remove('glitch'), 500);
-    }
-    if (closeBtn) {
-      closeBtn.onclick = () => {
-        popup.style.display = 'none';
-        sessionStorage.setItem('marroweEntered', 'true');
-      };
-    }
+    // Already entered this session, don't show popup
+    if (popup) popup.style.display = 'none';
   }
 
   setTimeout(function() {
     const term = document.getElementById('main-terminal');
     if(term) {
       term.classList.add('glitch');
-      // Remove the effect after (optional) 1.5s for one-time flash
       setTimeout(() => term.classList.remove('glitch'), 500);
     }
   }, 1000);
