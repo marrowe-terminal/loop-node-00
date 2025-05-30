@@ -6,13 +6,34 @@
   <title>Ξ2://loop-node-00 — MΔRROWΞ</title>
   <link rel="stylesheet" href="marrowe-style.css">
 <script>
+function startFlicker() {
+  const minInterval = 800;   // minimum time between flickers (ms)
+  const maxInterval = 4000;  // maximum time between flickers (ms)
+  const flickerDuration = 500; // how long the glitch lasts (ms)
+
+  function flicker() {
+    const term = document.getElementById('main-terminal');
+    if(term) {
+      term.classList.add('glitch');
+      setTimeout(() => term.classList.remove('glitch'), flickerDuration);
+    }
+    // Schedule next flicker at a random interval
+    const nextTime = Math.random() * (maxInterval - minInterval) + minInterval;
+    setTimeout(flicker, nextTime);
+  }
+
+  flicker(); // start the first flicker
+}
+
 window.onload = function () {
+  startFlicker();
+
+  // -- POPUP LOGIC STARTS HERE (keep your current popup code) --
   const popup = document.getElementById('trigger-popup');
   const closeBtn = document.getElementById('close-popup');
   const popupInner = document.querySelector('.popup-inner');
   const params = new URLSearchParams(window.location.search);
 
-  // Only show popup if not already shown this session
   if (!sessionStorage.getItem('marroweEntered')) {
     // Check if the referrer is NOT from your own site
     const isInternalReferrer = document.referrer.startsWith(window.location.origin);
@@ -30,21 +51,11 @@ window.onload = function () {
         };
       }
     } else {
-      // If returning from internal page, don't show the popup
       if (popup) popup.style.display = 'none';
     }
   } else {
-    // Already entered this session, don't show popup
     if (popup) popup.style.display = 'none';
   }
-
-setInterval(function() {
-  const term = document.getElementById('main-terminal');
-  if(term) {
-    term.classList.add('glitch');
-    setTimeout(() => term.classList.remove('glitch'), 250);
-  }
-}, 4000);
 };
 </script>
 </head>
