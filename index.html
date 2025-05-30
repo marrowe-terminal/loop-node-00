@@ -25,9 +25,15 @@ window.onload = function () {
       closeBtn.onclick = () => {
         popup.style.display = 'none';
         sessionStorage.setItem('marroweEntered', 'true');
-      };
+     // Trigger glitch after 3 seconds on .terminal-frame
+  setTimeout(function() {
+    const term = document.getElementById('main-terminal');
+    if(term) {
+      term.classList.add('glitch');
+      // Remove the effect after (optional) 1.5s for one-time flash
+      setTimeout(() => term.classList.remove('glitch'), 1500);
     }
-  }
+  }, 3000);
 };
 </script>
 </head>
@@ -43,7 +49,7 @@ window.onload = function () {
     </div>
   </div>
 
-  <div class="terminal-frame">
+  <div class="terminal-frame" id="main-terminal">
     <div class="ascii-art">
       +--[Ξ2 System Access: loop-node-00]--+
       |       MΔRROWΞ_OBSIDIAN SECTOR      |
