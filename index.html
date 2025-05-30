@@ -38,13 +38,13 @@ window.onload = function () {
     if (popup) popup.style.display = 'none';
   }
 
-  setTimeout(function() {
-    const term = document.getElementById('main-terminal');
-    if(term) {
-      term.classList.add('glitch');
-      setTimeout(() => term.classList.remove('glitch'), 500);
-    }
-  }, 1000);
+setInterval(function() {
+  const term = document.getElementById('main-terminal');
+  if(term) {
+    term.classList.add('glitch');
+    setTimeout(() => term.classList.remove('glitch'), 250);
+  }
+}, 4000);
 };
 </script>
 </head>
