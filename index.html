@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ξ2://loop-node-00 — MΔRROWΞ</title>
   <link rel="stylesheet" href="marrowe-style.css">
-  <script>
+<script>
 window.onload = function () {
   const popup = document.getElementById('trigger-popup');
   const closeBtn = document.getElementById('close-popup');
@@ -25,8 +25,10 @@ window.onload = function () {
       closeBtn.onclick = () => {
         popup.style.display = 'none';
         sessionStorage.setItem('marroweEntered', 'true');
-</script>
-  <script>
+      };
+    }
+  }
+
   setTimeout(function() {
     const term = document.getElementById('main-terminal');
     if(term) {
