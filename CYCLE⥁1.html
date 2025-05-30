@@ -51,8 +51,23 @@ She isn’t smiling.
 
 But she sees you.
 
-> <span class="glitch">&gt; Breathe </span> <audio src="breathe.mp3" controls style="vertical-align: middle; background:transparent; color:inherit;"></audio>
-> 
+<span id="breathe-audio-link" style="cursor:pointer; text-decoration:underline;">
+    <span class="glitch">&gt; Breathe</span>
+  </span>
+  <audio id="breathe-audio" src="echoes/breathe.mp3"></audio>
+</p>
+
+<script>
+  document.getElementById('breathe-audio-link').onclick = function() {
+    var audio = document.getElementById('breathe-audio');
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  }
+</script> 
 
 It lands like a command. Not barked—placed. She doesn’t speak like she wants to be obeyed.
 
