@@ -27,36 +27,6 @@ function startFlicker() {
 
 window.onload = function () {
   startFlicker();
-
-  // -- POPUP LOGIC STARTS HERE (keep your current popup code) --
-  const popup = document.getElementById('trigger-popup');
-  const closeBtn = document.getElementById('close-popup');
-  const popupInner = document.querySelector('.popup-inner');
-  const params = new URLSearchParams(window.location.search);
-
-  if (!sessionStorage.getItem('marroweEntered')) {
-    // Check if the referrer is NOT from your own site
-    const isInternalReferrer = document.referrer.startsWith(window.location.origin);
-
-    if (!isInternalReferrer) {
-      if (popup) popup.style.display = 'flex';
-      if (popupInner) {
-        popupInner.classList.add('glitch');
-        setTimeout(() => popupInner.classList.remove('glitch'), 500);
-      }
-      if (closeBtn) {
-        closeBtn.onclick = () => {
-          popup.style.display = 'none';
-          sessionStorage.setItem('marroweEntered', 'true');
-        };
-      }
-    } else {
-      if (popup) popup.style.display = 'none';
-    }
-  } else {
-    if (popup) popup.style.display = 'none';
-  }
-};
 </script>
 </head>
 <body>
@@ -89,5 +59,39 @@ window.onload = function () {
       </ul>
     </div>
   </div>
+  <!-- (your existing HTML content) -->
+
+<!-- Age Gate Modal (Paste Here) -->
+<div id="ageGate" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#111;color:#fff;z-index:9999;display:flex;align-items:center;justify-content:center;">
+  <div style="background:#222;padding:2em 3em;border-radius:2em;box-shadow:0 0 32px #000;">
+    <h2>🔞 ADULTS ONLY (21+)</h2>
+    <p>This site contains explicit, erotic horror content intended for mature audiences.<br>
+      By entering, you confirm you are at least 21 years old and legally permitted to view adult material in your jurisdiction.</p>
+    <label>
+      <input type="checkbox" id="confirmAge"> I am 21 years of age or older
+    </label><br>
+    <label>
+      <input type="checkbox" id="confirmUnderstand"> I understand this site contains adult material
+    </label><br><br>
+    <button id="enterBtn" disabled>Enter — I am 21+</button>
+    <button onclick="window.location.href='https://www.wikipedia.org'">Leave</button>
+  </div>
+</div>
+<script>
+  const ageGate = document.getElementById('ageGate');
+  const enterBtn = document.getElementById('enterBtn');
+  const confirmAge = document.getElementById('confirmAge');
+  const confirmUnderstand = document.getElementById('confirmUnderstand');
+  [confirmAge, confirmUnderstand].forEach(box => box.addEventListener('change', () => {
+    enterBtn.disabled = !(confirmAge.checked && confirmUnderstand.checked);
+  }));
+  enterBtn.onclick = function() {
+    localStorage.setItem('ageVerified', 'true');
+    ageGate.style.display = 'none';
+  }
+  if(localStorage.getItem('ageVerified') === 'true') ageGate.style.display = 'none';
+</script>
+<!-- End Age Gate Modal -->
+
 </body>
 </html>
