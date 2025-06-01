@@ -1,1 +1,58 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ξ2://loop-node-00 — MΔRROWΞ</title>
+  <link rel="stylesheet" href="marrowe-style.css">
+</head>
+<body>
+<div class="glyph-decoder">
+  <label for="glyphInput"> :</label>
+  <input id="glyphInput" type="text" maxlength="24" />
+  <button onclick="decodeGlyph()">Decode</button>
+  <div id="glyphOutput" class="glyph"></div>
+</div>
+<script>
+const glyphMap = {
+  "A": "𐌀", "a": "𐌀", // Aegis
+  "B": "𐌁", "b": "𐌁", // Braid
+  "C": "𐌂", "c": "𐌂", // Cradle
+  "D": "𐌃", "d": "𐌃", // Drift
+  "E": "Ξ",   "e": "Ξ",  // Echo
+  "F": "🜂", "f": "🜂", // Flame
+  "G": "𐌂̶", "g": "𐌂̶", // Grasp
+  "H": "∅",   "h": "∅",  // Hollow
+  "I": "⬤",   "i": "⬤",  // Ink
+  "J": "✴",   "j": "✴",  // Joy
+  "K": "☿",   "k": "☿",  // Kink
+  "L": "∞",   "l": "∞",  // Loop
+  "M": "🝛", "m": "🝛", // Marrow
+  "N": "☒",   "n": "☒",  // Null
+  "O": "⊙",   "o": "⊙",  // Omen
+  "P": "∴",   "p": "∴",  // Pulse
+  "Q": "𐌐", "q": "𐌐", // Quake
+  "R": "⏚",   "r": "⏚",  // Rift
+  "S": "⛨",   "s": "⛨",  // Seal
+  "T": "~",   "t": "~",  // Thread
+  "U": "⧖",   "u": "⧖",  // Unseen
+  "V": "🜄", "v": "🜄", // Vessel
+  "W": "≡",   "w": "≡",  // Whisper
+  "X": "✖",   "x": "✖",  // Xeno
+  "Y": "🜃", "y": "🜃", // Yield
+  "Z": "⊤",   "z": "⊤",  // Zenith
+};
+function decodeGlyph() {
+  const input = document.getElementById('glyphInput').value;
+  let output = '';
+  for (let char of input) {
+    output += glyphMap[char] || char;
+  }
+  document.getElementById('glyphOutput').innerText = output;
+}
+</script>
+      <p>Return to <a href="index.html">Root Node</a></p>
+    </div>
+  </div>
+</body>
+</html>
