@@ -1,13 +1,13 @@
 # 🜛 loop-node-00
 
-> **MΔRROWΞ**  
-> *A recursive erotic horror project by* **marrowe-terminal**
+> **MISTRΞSS MΔRROWΞ**  
+> *A recursive erotic project by* **marrowe-terminal**
 
 ---
 
-##  What Is MΔRROWΞ?
+##  What Is MISTRΞSS MΔRROWΞ?
 
-**MΔRROWΞ** is a transmedia erotic horror universe that blends dark fantasy, sci-fi, and the occult. It centers around the mysterious, seductive entity known as Mistress Marrowe, who appears across timelines, platforms, and bodies—always tethered to desire, transformation, and secrets hidden in flesh and fabric. We see her echoes (Ξ) across the fabric, but rarely Mistress herself (🜂).
+**MISTRΞSS MΔRROWΞ** is a transmedia erotic character that blends dark fantasy, sci-fi, and the occult. The mysterious, seductive entity known as Mistress Marrowe appears across timelines, platforms, and bodies—always tethered to desire, transformation, and secrets hidden in flesh and fabric. We see her echoes across the fabric, but rarely Mistress herself.
 
 ##  Content Warning
 
@@ -26,9 +26,9 @@ By engaging with this material, you consent to experiencing intense and potentia
 
 If you wish to support the continuation of this project and gain access to exclusive content:
 
-- [OnlyFans Portal]([https://onlyfans.com/mistress_marrowe])
+- [Fansly]([https://fansly.com/MistressMarrowe])
 
-Your support is deeply appreciated and fuels the expansion of the MΔRROWΞ universe.
+Your support is deeply appreciated and fuels the expansion of the Veyline Universe, and MISTRΞSS MΔRROWΞ.
 
 ---
 
